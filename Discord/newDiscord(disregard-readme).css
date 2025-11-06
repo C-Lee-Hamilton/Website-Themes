@@ -1,0 +1,80 @@
+/* This is just to partially mimic Nitro */
+:root {
+    /* Icon filter variables (for recoloring SVGs) */
+    --icon-filter-black: brightness(0) saturate(100%);
+    --icon-filter-white: brightness(0) invert(1);
+    --icon-filter-red: brightness(0) saturate(100%) invert(13%) sepia(100%) hue-rotate(350deg) saturate(500%);
+    --icon-filter-blue: brightness(0) saturate(100%) invert(29%) sepia(100%) hue-rotate(190deg) saturate(500%);
+    --icon-filter-green: brightness(0) saturate(100%) invert(35%) sepia(87%) hue-rotate(90deg) saturate(400%);
+    --icon-filter-yellow: brightness(0) saturate(100%) invert(88%) sepia(63%) hue-rotate(1deg) saturate(700%);
+
+    /* Background color variables for voice/control buttons */
+    --bg-red: rgba(255, 0, 0, 0.52);       
+    --bg-blue: rgba(0, 123, 255, 0.52);    
+    --bg-green: rgba(40, 167, 69, 0.52);   
+    --bg-yellow: rgba(255, 193, 7, 0.52);  
+    --bg-purple: rgba(111, 66, 193, 0.52); 
+    
+    /* Border color variables */
+    --border-red: rgb(255, 0, 0);       
+    --border-blue: rgb(0, 123, 255);    
+    --border-green: rgb(40, 167, 69);  
+    --border-yellow: rgb(255, 193, 7); 
+    --border-purple: rgb(111, 66, 193); 
+}
+
+/* Put your background image and border colors here */
+/* For the background url, you can only use things from the following:  */
+/* Tenor, Imgur, Discord CDN, Giphy, Twitter, Spotify, Youtube thumbnails */
+
+[aria-label="User area"] {
+  background: url("https://media.tenor.com/Ncc-C_0alJMAAAAM/space.gif") no-repeat center center !important;
+ background-size: cover !important;
+    border:1px var(--border-purple) solid;
+}
+
+/* Icon Colors */
+[aria-label*="Options"] svg path,[aria-label="Mute"] svg path,[aria-label="Deafen"] svg path {
+    filter:var(--icon-filter-black)!important; 
+}
+
+/* Icon Backgrounds */
+[aria-label*="Options"],[aria-label="Mute"],[aria-label="Deafen"] {
+    background:var(--bg-red)!important;
+}
+
+/* Pop Up Banner and Background, same rules as other gif on where it comes from */
+/* These Classnames/IDs could change, so this might not be permanent, adjust as needed */
+#popout_254 .banner__68edb {
+/*     background: linear-gradient(135deg, #6f42c1, #ff69b4) !important; */
+     background: url("https://media.tenor.com/Ncc-C_0alJMAAAAM/space.gif") no-repeat center center !important;
+     background-size: cover !important;
+}
+/* These Classnames/IDs could change, so this might not be permanent, adjust as needed */
+/* You can adjust the gradient colors as needed using whatever colors you want, or from the variables above */
+#popout_254 .inner_c0bea0{background:linear-gradient(to bottom, #585252, #585252, #585252, rgb(111, 66, 193)) !important;}
+
+
+/* Font Sizes And Font Type, remove these lines if you don't want/need */
+
+body {
+    font-family: monospace !important; 
+    font-size: 30px !important;
+}
+
+ol div {
+    font-size: 22px !important;  
+}
+
+form div {
+    font-size: 22px !important;  
+}
+
+/* Leave Alone */
+[aria-label="More Options"]{
+    background:none !important;
+}
+[aria-label="More Options"] svg path{
+    filter:none !important;
+}
+
