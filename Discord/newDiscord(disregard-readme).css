@@ -45,14 +45,15 @@
 
 /* Pop Up Banner and Background, same rules as other gif on where it comes from */
 /* These Classnames/IDs could change, so this might not be permanent, adjust as needed */
-#popout_254 .banner__68edb {
-/*     background: linear-gradient(135deg, #6f42c1, #ff69b4) !important; */
-     background: url("https://media.tenor.com/Ncc-C_0alJMAAAAM/space.gif") no-repeat center center !important;
-     background-size: cover !important;
+.banner__68edb:not(aside .banner__68edb) {
+    background: url("https://media.tenor.com/Ncc-C_0alJMAAAAM/space.gif") no-repeat center center !important;
+    background-size: cover !important;
 }
-/* These Classnames/IDs could change, so this might not be permanent, adjust as needed */
-/* You can adjust the gradient colors as needed using whatever colors you want, or from the variables above */
-#popout_254 .inner_c0bea0{background:linear-gradient(to bottom, #585252, #585252, #585252, rgb(111, 66, 193)) !important;}
+
+/* Inner gradient, also not inside asides */
+.inner_c0bea0:not(aside .inner_c0bea0) {
+    background: linear-gradient(to bottom, #585252, #585252, #585252, rgb(111, 66, 193)) !important;
+}
 
 
 /* Font Sizes And Font Type, remove these lines if you don't want/need */
